@@ -1,11 +1,16 @@
-const {Schema, model} = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
   {
-    username: { type: String, required: 'Username is required', unique: true, trim: true },
+    username: {
+      type: String,
+      required: "Username is required",
+      unique: true,
+      trim: true,
+    },
     email: {
       type: String,
-      required: 'Email is required',
+      required: "Email is required",
       unique: true,
       match: [
         /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
